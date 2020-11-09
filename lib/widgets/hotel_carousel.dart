@@ -14,7 +14,7 @@ class HotelCarousel extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Exclusive Hotels',
+                Text('Everyday Life',
                   style:TextStyle(
                     fontSize:22.0,
                     fontWeight:FontWeight.bold,
@@ -44,7 +44,7 @@ class HotelCarousel extends StatelessWidget {
                 Hotel hotel =hotels[index];
                 return Container(
                   margin: EdgeInsets.all(10.0),
-                  width: 240,
+                  width: 210,
 
                   child: Stack(
                     alignment: Alignment.topCenter,
@@ -54,10 +54,10 @@ class HotelCarousel extends StatelessWidget {
                         bottom: 15.0,
                         child: Container(
                           height: 120.0,
-                          width: 240,
+                          width: 200,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Padding(
                             padding:  EdgeInsets.all(10.0),
@@ -112,7 +112,7 @@ class HotelCarousel extends StatelessWidget {
                             borderRadius:BorderRadius.circular(20.0),
                             child: Image(
                               height: 180.0,
-                              width:220.0 ,
+                              width:180.0 ,
                               image: AssetImage(hotel.imageUrl),
                               fit: BoxFit.cover,
                             ),

@@ -14,12 +14,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int slectedIndex=0;
   int _currentTab=0;
-  List<IconData> icons=[
-    FontAwesomeIcons.plane,
-    FontAwesomeIcons.bed,
-    FontAwesomeIcons.walking,
-    FontAwesomeIcons.biking,
-  ];
+  // List<IconData> icons=[
+  //   FontAwesomeIcons.plane,
+  //   FontAwesomeIcons.bed,
+  //   FontAwesomeIcons.walking,
+  //   FontAwesomeIcons.biking,
+  // ];
   Widget buildIcon (int index) {
     return GestureDetector(
       onTap:(){
@@ -37,14 +37,14 @@ class _HomeScreenState extends State<HomeScreen> {
           :Color(0xFFE7EBEE),
           borderRadius: BorderRadius.circular(30.0),
         ),
-        child: Icon(
-          icons[index],
-          size: 25.0,
-          color: slectedIndex==index? Theme
-              .of(context)
-              .primaryColor
-          :Color(0xFFB4C1C4),
-        ),
+        // child: Icon(
+        //   icons[index],
+        //   size: 25.0,
+        //   color: slectedIndex==index? Theme
+        //       .of(context)
+        //       .primaryColor
+        //   :Color(0xFFB4C1C4),
+        // ),
       ),
     );
   }
@@ -59,17 +59,17 @@ class _HomeScreenState extends State<HomeScreen> {
           children:<Widget> [
         Padding(
           padding: EdgeInsets.only(left: 20.0,right: 120.0),
-          child: Text('what would you like to find',style: TextStyle(fontSize: 30.0,fontWeight:FontWeight.bold,
+          child: Text('Discover',style: TextStyle(fontSize: 30.0,fontWeight:FontWeight.bold,
           ),),
         ),
             SizedBox(height: 20.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: icons.asMap().entries.map(
-                  (MapEntry map)=> buildIcon(map.key),
-              ).toList(),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: icons.asMap().entries.map(
+            //       (MapEntry map)=> buildIcon(map.key),
+            //   ).toList(),
 
-              ),
+            //   ),
             SizedBox(height: 20.0),
             DestinationCarousel(),
             SizedBox(height: 20.0,),
@@ -87,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
       items: [
         BottomNavigationBarItem(
           icon: Icon(
-            Icons.search,
+            Icons.home,
             size: 30.0,
           ),
       title: SizedBox.shrink(),
@@ -95,23 +95,34 @@ class _HomeScreenState extends State<HomeScreen> {
 
       BottomNavigationBarItem(
         icon: Icon(
-          Icons.local_pizza,
+          Icons.map_sharp,
           size: 30.0,
         ),
         title: SizedBox.shrink(),
 
         ),
 
-        BottomNavigationBarItem(
-          icon: CircleAvatar(
-            radius: 15.0,
-            backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'
+            BottomNavigationBarItem(
+        icon: Icon(
+          Icons.settings,
+          size: 30.0,
+        ),
+        title: SizedBox.shrink(),
 
-            ),
-          ),
-          title: SizedBox.shrink(),
+        ),
 
-        )
+        
+
+        // BottomNavigationBarItem(
+        //   icon: CircleAvatar(
+        //     radius: 15.0,
+        //     backgroundImage: NetworkImage('http://i.imgur.com/zL4Krbz.jpg'
+
+        //     ),
+        //   ),
+        //   title: SizedBox.shrink(),
+
+        // )
 
       ],
     ),

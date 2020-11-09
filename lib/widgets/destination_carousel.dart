@@ -15,7 +15,7 @@ class DestinationCarousel extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Top Deastinations',
+                Text('New Lessons',
                   style:TextStyle(
                     fontSize:22.0,
                     fontWeight:FontWeight.bold,
@@ -142,7 +142,8 @@ class DestinationCarousel extends StatelessWidget {
                                   ],
                                 ),
 
-                              ],),
+                              ],
+                              ),
                             )
                           ],),
                         )
